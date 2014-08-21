@@ -13,9 +13,8 @@ else
 fi
 local git_branch='$(git_super_status)%{$reset_color%}'
 
-PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
-╰─%B$%b "
+PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}%B$%b "
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
+ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"
